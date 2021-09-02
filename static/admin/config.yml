@@ -31,11 +31,10 @@ collections:
             name: home
             label: Homepage Options
             fields:
-              - widget: list
+              - widget: string
                 name: title
                 label: Title
                 default: ''
-                fields: {label: Tag, name: tag_name, widget: string}
                 required: false
               - widget: markdown
                 name: description
