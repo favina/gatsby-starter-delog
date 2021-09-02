@@ -30,17 +30,6 @@ collections:
           - widget: list
             name: home
             label: Homepage Options
-            fields:
-              - widget: string
-                name: title
-                label: Title
-                default: ''
-                required: false
-              - widget: markdown
-                name: description
-                label: Description
-                default: ''
-                required: false
   - name: blog
     label: Blog
     folder: _data/blog
