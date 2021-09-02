@@ -36,11 +36,12 @@ collections:
                 label: Title
                 default: ''
                 required: false
-              - widget: markdown
+              - widget: list
                 name: description
                 label: Description
                 default: ''
                 required: false
+                
   - name: blog
     label: Blog
     folder: _data/blog
@@ -71,5 +72,5 @@ collections:
         required: false
         media_library:
           config:
-            multiple: false
+            multiple: true
       - { name: body, label: Body, widget: markdown }
