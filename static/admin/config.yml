@@ -41,8 +41,8 @@ collections:
                 label: Description
                 required: false
                 fields:
-                  - { label: "Source", name: "src", widget: "string" }
-                  - { label: "Alt Text", name: "alt", widget: "string" }
+                  - { label: Source, name: src, widget: string }
+                  - { label: Alt Text, name: alt, widget: string }
   - name: blog
     label: Blog
     folder: _data/blog
@@ -73,5 +73,5 @@ collections:
         required: false
         media_library:
           config:
-            multiple: true
+            multiple: false
       - { name: body, label: Body, widget: markdown }
