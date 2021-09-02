@@ -39,9 +39,10 @@ collections:
               - widget: list
                 name: description
                 label: Description
-                default: ''
                 required: false
-                
+                fields:
+                  - { label: "Source", name: "src", widget: "string" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
   - name: blog
     label: Blog
     folder: _data/blog
