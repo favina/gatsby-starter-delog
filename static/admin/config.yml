@@ -35,9 +35,7 @@ collections:
                 name: title
                 label: Title
                 default: ''
-                fields:
-                  - { label: Source, name: src, widget: string }
-                  - { label: Alt Text, name: alt, widget: string }
+                fields: {label: Tag, name: tag_name, widget: string}
                 required: false
               - widget: markdown
                 name: description
