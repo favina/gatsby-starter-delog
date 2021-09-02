@@ -59,7 +59,7 @@ collections:
         pattern: [/]
         hint: "Path must start with /"
       - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
+      - { name: title, label: Title, widget: list }
       - label: Meta Description
         name: metaDescription
         widget: text
