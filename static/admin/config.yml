@@ -39,6 +39,7 @@ collections:
               - widget: markdown
                 name: description
                 label: Description
+                default: ''
                 required: false
   - name: blog
     label: Blog
