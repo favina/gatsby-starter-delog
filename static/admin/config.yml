@@ -36,13 +36,10 @@ collections:
                 label: Title
                 default: ''
                 required: false
-              - widget: list
+              - widget: markdown
                 name: description
                 label: Description
                 required: false
-                fields:
-                  - { label: Source, name: src, widget: string }
-                  - { label: Alt Text, name: alt, widget: string }
   - name: blog
     label: Blog
     folder: _data/blog
