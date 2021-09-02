@@ -27,7 +27,7 @@ collections:
             label: Description
             default: ''
             required: false
-          - widget: object
+          - widget: list
             name: home
             label: Homepage Options
             fields:
