@@ -25,7 +25,7 @@ collections:
           - widget: text
             name: description
             label: Description
-            default: ''
+            default: ""
             required: false
           - widget: object
             name: home
@@ -34,25 +34,20 @@ collections:
               - widget: string
                 name: title
                 label: Title
-                default: ''
+                default: ""
                 required: false
               - widget: markdown
                 name: description
                 label: Description
-                default: ''
+                default: ""
                 required: false
   - name: blog
     label: Blog
     folder: _data/blog
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
-      - {
-          label: Template,
-          name: template,
-          widget: hidden,
-          default: BlogPost,
-        }
+      - { label: Template, name: template, widget: hidden, default: BlogPost }
       - name: path
         label: Path
         widget: string
@@ -63,8 +58,45 @@ collections:
         name: metaDescription
         widget: list
         required: false
-        fields: 
-         - { name: title, label: Title, widget: string }
+        fields:
+          - { name: title, label: Title, widget: string }
+      - label: Heading
+        name: heading
+        widget: list
+        required: false
+        fields:
+          - { name: title, label: Title, widget: string }
+      - label: Column
+        name: columnData
+        widget: list
+        required: false
+        fields:
+          - label: Row
+            name: rowData
+            widget: list
+            required: false
+            fields:
+              - name: Data
+                label: data
+                widget: list
+                fields:
+                  - { name: row, label: Row, widget: string }
+      - label: Profile
+        name: Profile
+        widget: list
+        required: false
+        fields:
+          - label: ProfileData
+            name: profileData
+            widget: list
+            required: false
+            fields:
+              - name: image,
+                label: image,
+                widget: image
+              - name: title,
+                label: Title,
+                widget: string
       - label: Featured Image
         name: thumbnail
         widget: image
