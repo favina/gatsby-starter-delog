@@ -38,15 +38,14 @@ collections:
                 label: Description
                 default: ""
                 required: false
-                - label: Featured Image
+                - widget: image
                   name: image
-                  widget: image
+                  label: Featured Image
                   hint: "Image size 1280x800 works best :)"
-                  required: true
+                  required: false
                   media_library:
                     config:
                       multiple: false
-              - { name: body, label: Body, widget: markdown }
               - widget: string
                 name: buttonText
                 label: Button Text
