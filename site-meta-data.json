@@ -2,7 +2,7 @@
   "title": "Delkog",
   "siteUrls": [
     {
-    "urlName": "About"
+      "urlName": "About"
     },
     {
       "urlName": "Key Dates"
@@ -15,9 +15,11 @@
     },
     {
       "urlName": "Contact"
+    },
+    {
+      "urlName": "New url"
     }
-    
-    ],
+  ],
   "home": {
     "title": "EUROPEAN CONFERENCE ON PRODUCT AND PROCESS MODELING 2020-2021",
     "description": "15-17 SEPTEMBER, 2021. MOSCOW, RUSSIAN FEDERATION IMPORTANT UPDATE: DUE TO HIGH PANDEMIC AND ORGANIZATIONAL RISKS THE CONFERENCE WILL BE HELD ONLINE",
