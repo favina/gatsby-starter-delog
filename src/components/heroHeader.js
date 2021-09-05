@@ -20,7 +20,7 @@ export default () => (
             __html: data.site.siteMetadata.home.description,
           }}
         />
-        <Link to="/contact" className="button -primary">
+        <Link to="/contact" className="button-primary">
           Get in touch &rarr;
         </Link>
       </div>

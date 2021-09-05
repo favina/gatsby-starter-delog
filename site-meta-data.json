@@ -2,20 +2,26 @@
   "title": "Delkog",
   "siteUrls": [
     {
-    "urlName": "home"
+    "urlName": "About"
     },
     {
-      "urlName": "Page"
+      "urlName": "Key Dates"
     },
     {
-      "urlName": "Page2"
+      "urlName": "Committee"
+    },
+    {
+      "urlName": "Submissions"
+    },
+    {
+      "urlName": "Contact"
     }
     
     ],
   "home": {
-    "title": "Hi! I'm site title",
-    "description": "and developers, help them build amazing professional looking websites with ease. You don't have to worry about nitty gritty of web hosting services to run a blog and yet take full advantage of CMS to manage content :)",
-    "image": "assets/becca-tapert-sY5RjMB1KkE-unsplash.jpg",
+    "title": "EUROPEAN CONFERENCE ON PRODUCT AND PROCESS MODELING 2020-2021",
+    "description": "15-17 SEPTEMBER, 2021. MOSCOW, RUSSIAN FEDERATION IMPORTANT UPDATE: DUE TO HIGH PANDEMIC AND ORGANIZATIONAL RISKS THE CONFERENCE WILL BE HELD ONLINE",
+    "image": "assets/oslo.jpg",
     "buttonText": "ButtonText",
     "buttonLink": "https://google.com"
   }

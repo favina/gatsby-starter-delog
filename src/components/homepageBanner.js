@@ -9,10 +9,7 @@ const HomepageBanner = ({ homeContent, siteUrls }) => {
         className="img-fluid banner"
         style={{ backgroundImage: `url(${homeContent.image})` }}
       >
-        <Navbar
-          className="navbar navbar-expand-sm fixed-top navbar-light"
-          expand="lg"
-        >
+        <Navbar className="navbar navbar-expand-sm navbar-light" expand="lg">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
           <Navbar.Collapse

@@ -55,9 +55,9 @@ export default ({ children }) => {
     <div>
       <Container>
         <Row>
-          <Col sm={12} className={"text-center"}>
+          <Col sm={12}>
             <section id={"about"}>
-              <h2>{siteContent.about.title}</h2>
+              <h2 className={"text-center"}>{siteContent.about.title}</h2>
               <p>{siteContent.about.subtext}</p>
               <Table striped bordered hover>
                 <thead>
@@ -81,11 +81,11 @@ export default ({ children }) => {
               </Table>
             </section>
             <section id={"keyDates"}>
-              <h2>{siteContent.keyDates.title}</h2>
+              <h2 className={"text-center"}>{siteContent.keyDates.title}</h2>
               <p>{siteContent.keyDates.text}</p>
             </section>
             <section id={"Committee"}>
-              <h2>{siteContent.profile.title}</h2>
+              <h2 className={"text-center"}>{siteContent.profile.title}</h2>
               <p>{siteContent.profile.subtext}</p>
               <p>{siteContent.profile.subtext}</p>
               {siteContent.profile.profileData.map(({ image, text }, i) => (
@@ -112,7 +112,7 @@ export default ({ children }) => {
             <section id={"submissions"}>
               {siteContent.submissions.map(({ title, text }, i) => (
                 <Fragment key={i}>
-                  <h2>{title}</h2>
+                  <h2 className={"text-center"}>{title}</h2>
                   <p>{text}</p>
                 </Fragment>
               ))}
