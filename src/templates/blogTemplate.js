@@ -16,9 +16,6 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { site, markdownRemark } = data; // data.markdownRemark holds your post data
-  const { siteMetadata } = site;
-  const { frontmatter, html } = markdownRemark;
-  console.log("site", site);
 
   return (
     // <Layout>
@@ -97,16 +94,3 @@ export default function Template({
     // </Layout>
   );
 }
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    markdownRemark {
-      html
-    }
-  }
-`;

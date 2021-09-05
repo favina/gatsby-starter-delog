@@ -56,7 +56,7 @@ export default ({ children }) => {
       <Container>
         <Row>
           <Col sm={12}>
-            <section id={"about"}>
+            <section id={"About"}>
               <h2 className={"text-center"}>{siteContent.about.title}</h2>
               <p>{siteContent.about.subtext}</p>
               <Table striped bordered hover>
@@ -80,13 +80,12 @@ export default ({ children }) => {
                 </tbody>
               </Table>
             </section>
-            <section id={"keyDates"}>
+            <section id={"Key Dates"}>
               <h2 className={"text-center"}>{siteContent.keyDates.title}</h2>
               <p>{siteContent.keyDates.text}</p>
             </section>
             <section id={"Committee"}>
               <h2 className={"text-center"}>{siteContent.profile.title}</h2>
-              <p>{siteContent.profile.subtext}</p>
               <p>{siteContent.profile.subtext}</p>
               {siteContent.profile.profileData.map(({ image, text }, i) => (
                 <div className="card mb-3" key={i}>
@@ -109,7 +108,7 @@ export default ({ children }) => {
               ))}
               <p>{siteContent.profile.text}</p>
             </section>
-            <section id={"submissions"}>
+            <section id={"Submissions"}>
               {siteContent.submissions.map(({ title, text }, i) => (
                 <Fragment key={i}>
                   <h2 className={"text-center"}>{title}</h2>

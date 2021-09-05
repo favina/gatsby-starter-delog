@@ -19,7 +19,7 @@ const HomepageBanner = ({ homeContent, siteUrls }) => {
             <Nav className="m-auto navbarLinks">
               {siteUrls.map(({ urlName }, i) => (
                 <Fragment key={i}>
-                  <Nav.Link href="#home">{urlName}</Nav.Link>
+                  <Nav.Link href={`#${urlName}`}>{urlName}</Nav.Link>
                 </Fragment>
               ))}
             </Nav>
