@@ -32,7 +32,7 @@ collections:
                 name: title
                 label: Title
                 default: ""
-                required: true
+                required: false
               - widget: markdown
                 name: description
                 label: Description
@@ -49,11 +49,11 @@ collections:
               - widget: string
                 name: buttonText
                 label: Button Text
-                required: true
+                required: false
               - widget: string
                 name: buttonLink
                 label: Button Link
-                required: true
+                required: false
   - name: homepageContent
     label: HomepageContent
     files:
