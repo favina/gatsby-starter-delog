@@ -39,13 +39,13 @@ collections:
                 default: ""
                 required: false
                 - label: Featured Image
-              - name: image
-                widget: image
-                hint: "Image size 1280x800 works best :)"
-                required: true
-                media_library:
-                  config:
-                    multiple: false
+                  name: image
+                  widget: image
+                  hint: "Image size 1280x800 works best :)"
+                  required: true
+                  media_library:
+                    config:
+                      multiple: false
               - { name: body, label: Body, widget: markdown }
               - widget: string
                 name: buttonText
