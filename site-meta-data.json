@@ -1,9 +1,28 @@
 {
-  "title": "Delog",
-  "siteUrl": "https://delog-w3layouts.netlify.com/",
-  "description": "Delog, a GatsbyJS and Netlify CMS starter for Designers and Developers",
+  "title": "Delkog",
+  "siteUrls": [
+    {
+    "urlName": "About"
+    },
+    {
+      "urlName": "Key Dates"
+    },
+    {
+      "urlName": "Committee"
+    },
+    {
+      "urlName": "Submissions"
+    },
+    {
+      "urlName": "Contact"
+    }
+    
+    ],
   "home": {
-    "title": "Hi! I'm Delog",
-    "description": "![](/assets/image-5.jpg)\n\nI have been specifically designed to become a digital home for designers and developers, help them build amazing professional looking websites with ease. You don't have to worry about nitty gritty of web hosting services to run a blog and yet take full advantage of CMS to manage content :)"
+    "title": "EUROPEAN CONFERENCE ON PRODUCT AND PROCESS MODELING 2020-2021",
+    "description": "15-17 SEPTEMBER, 2021. MOSCOW, RUSSIAN FEDERATION IMPORTANT UPDATE: DUE TO HIGH PANDEMIC AND ORGANIZATIONAL RISKS THE CONFERENCE WILL BE HELD ONLINE",
+    "image": "assets/oslo.jpg",
+    "buttonText": "ButtonText",
+    "buttonLink": "https://google.com"
   }
 }

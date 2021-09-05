@@ -7,102 +7,190 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: settings
-    label: Settings
+  - name: homepage
+    label: Homepage
     files:
-      - name: config
-        label: Config
+      - name: HomepageBanner
+        label: HomepageBanner
         file: site-meta-data.json
         fields:
           - widget: string
             name: title
             label: Site Title
-            required: true
-          - widget: string
-            name: siteUrl
-            label: Website URL
-            required: true
-          - widget: text
-            name: description
-            label: Description
-            default: ""
             required: false
+          - widget: list
+            name: siteUrls
+            label: Site Urls
+            required: true
+            fields: 
+              - {label: URLName, name: urlName, widget: string}
           - widget: object
             name: home
-            label: Homepage Options
+            label: Homepage Content
             fields:
               - widget: string
                 name: title
                 label: Title
                 default: ""
-                required: false
+                required: true
               - widget: markdown
                 name: description
                 label: Description
                 default: ""
                 required: false
-  - name: blog
-    label: Blog
-    folder: _data/blog
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    create: true
-    fields:
-      - { label: Template, name: template, widget: hidden, default: BlogPost }
-      - name: path
-        label: Path
-        widget: string
-        pattern: [/]
-        hint: "Path must start with /"
-      - { name: date, label: Date, widget: datetime }
-      - label: Meta Description
-        name: metaDescription
-        widget: list
-        required: false
-        fields:
-          - { name: title, label: Title, widget: string }
-      - label: Heading
-        name: heading
-        widget: list
-        required: false
-        fields:
-          - { name: title, label: Title, widget: string }
-      - label: Column
-        name: columnData
-        widget: list
-        required: false
-        fields:
-          - label: Row
-            name: rowData
-            widget: list
-            required: false
-            fields:
-              - name: Data
-                label: data
-                widget: list
-                fields:
-                  - { name: row, label: Row, widget: string }
-      - label: Profile
-        name: Profile
-        widget: list
-        required: false
-        fields:
-          - label: ProfileData
-            name: profileData
-            widget: list
-            required: false
-            fields:
-              - name: image,
-                label: image,
+                - label: Featured Image
+              - name: image
                 widget: image
-              - name: title,
-                label: Title,
+                hint: "Image size 1280x800 works best :)"
+                required: true
+                media_library:
+                  config:
+                    multiple: false
+              - { name: body, label: Body, widget: markdown }
+              - widget: string
+                name: buttonText
+                label: Button Text
+                required: true
+              - widget: string
+                name: buttonLink
+                label: Button Link
+                required: true
+  - name: homepageContent
+    label: HomepageContent
+    files:
+      - name: HomepageContent
+        label: HomepageContent
+        file: site-content-data.json
+        fields:      
+          - label: About
+            name: about
+            widget: object
+            fields:
+              - name: title
+                label: Title
                 widget: string
-      - label: Featured Image
-        name: thumbnail
-        widget: image
-        hint: "Image size 1280x800 works best :)"
-        required: false
-        media_library:
-          config:
-            multiple: false
-      - { name: body, label: Body, widget: markdown }
+              - label: SubText
+                name: subtext
+                widget: text 
+              - name: table
+                label: Table
+                widget: object
+                required: false
+                fields:
+                  - label: Heading
+                    name: heading
+                    widget: list
+                    required: false
+                    fields:
+                      - { name: title, label: Title, widget: string }
+                  - label: Column
+                    name: column
+                    widget: list
+                    required: false
+                    fields:
+                      - name: ColumnData
+                        label: columnData
+                        widget: list
+                        fields:
+                           - name: Row
+                            label: row
+                            widget: list
+                            fields:
+                                - { name: Data, label: Data, widget: string }     
+              - label: Text
+                name: text
+                widget: text
+          - label: Key Dates
+            name: keyDates
+            widget: object
+            required: false
+            fields:
+              - name: title
+                label: Title 
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Conference topics
+            name: ConferenceTopics
+            widget: object
+            required: false
+            fields:
+              - name: title
+                label: Title 
+                widget: string
+              - label: Text
+                name: text
+                widget: text 
+          - label: Profile
+            name: profile
+            widget: object
+            required: false
+            fields:
+              - name: title
+                label: Title
+                widget: string
+              - label: SubText
+                name: subtext
+                widget: text 
+              - label: ProfileData
+                name: profileData
+                widget: list
+                required: false
+                fields:
+                  - name: image
+                    label: image
+                    widget: image
+                  - name: title
+                    label: Title
+                    widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Speakers
+            name: speakers
+            widget: object
+            required: false
+            fields:
+              - name: title
+                label: Title
+                widget: string
+              - label: SubText
+                name: subtext
+                widget: text 
+              - label: Speaker Details
+                name: speakerDetails
+                widget: list
+                required: false
+                fields:
+                  - name: image
+                    label: image
+                    widget: image
+                  - name: title
+                    label: Title
+                    widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Submission
+            name: submissions
+            widget: list
+            required: false
+            fields:
+              - name: title
+                label: Title 
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+          - label: Partners
+            name: partners
+            widget: list
+            required: false
+            fields:
+              - name: title
+                label: Title 
+                widget: string
+              - label: Text
+                name: text
+                widget: text
