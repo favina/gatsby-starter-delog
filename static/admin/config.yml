@@ -92,10 +92,10 @@ collections:
                         widget: list
                         fields:
                            - name: Row
-                            label: row
-                            widget: list
-                            fields:
-                                - { name: Data, label: Data, widget: string }     
+                             label: row
+                             widget: list
+                             fields:
+                               - { name: Data, label: Data, widget: string }     
               - label: Text
                 name: text
                 widget: text
