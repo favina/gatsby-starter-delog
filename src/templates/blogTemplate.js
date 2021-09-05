@@ -18,17 +18,18 @@ export default function Template({
   const { site, markdownRemark } = data; // data.markdownRemark holds your post data
   const { siteMetadata } = site;
   const { frontmatter, html } = markdownRemark;
-  console.log("here", markdownRemark.frontmatter.profile);
+  console.log("site", site);
 
   return (
-    <Layout>
-      <Helmet>
-        <title>
-          {frontmatter.title} | {siteMetadata.title}
-        </title>
-        <meta name="description" content={frontmatter.metaDescription} />
-      </Helmet>
-      <div className="blog-post-container">
+    // <Layout>
+    //   <Helmet>
+    //     <title>
+    //       {frontmatter.title} | {siteMetadata.title}
+    //     </title>
+    //     <meta name="description" content={frontmatter.metaDescription} />
+    //   </Helmet>
+    {
+      /* <div className="blog-post-container">
         <article className="post">
           {!frontmatter.thumbnail && (
             <div className="post-thumbnail">
@@ -91,43 +92,21 @@ export default function Template({
             </div>
           </div>
         ))
-      )}
-    </Layout>
+      )} */
+    }
+    // </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
+  query {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark {
       html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
-        title
-        thumbnail
-        metaDescription
-        heading {
-          title
-        }
-        profile {
-          profileData {
-            image
-            title
-          }
-        }
-        columnData {
-          rowData {
-            data {
-              row
-            }
-          }
-        }
-      }
     }
   }
 `;
