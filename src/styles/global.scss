@@ -412,7 +412,6 @@ body.light {
   letter-spacing: 1px;
 }
 .bannerContent {
-  padding: 190px 0;
   width: 100%;
   vertical-align: middle;
   position: relative;
@@ -443,8 +442,9 @@ body.light {
 .homeButton:hover {
   text-decoration: none;
   transition: 350ms;
-  background: #494953;
+  background: rgba(0, 0, 0, 0.97);
   color: white;
+  border-color: white;
 }
 .navbarLinks a {
   text-transform: uppercase;
@@ -489,6 +489,16 @@ section {
 }
 
 .footer {
-  height: 200px;
+  padding-top: 50px;
+  height: 150px;
   background-color: rgba(255, 255, 255, 0.66);
+}
+.footerLinks {
+  color: black;
+}
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.27);
+    text-align: center;
+  }
 }

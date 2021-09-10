@@ -1,0 +1,39 @@
+{
+  "about": {
+    "title": "About conference",
+    "subtext": "ECPPM 2020-2021 is the 13th European Conference on Product & Process Modelling, the flagship conference event of the European Association of Product and Process Modelling (EAPPM), with a long standing history of excellence in product and process modelling in building industry, which is currently known as building information modelling (BIM). For over 2years, the biannual ECPPM (European Conference on Product and Process Modelling) conference series, as the oldest BIM conference, has provided an unique platform for the presentation and discussion of the most recent advances with regard to the ICT (Information and Communication Technology) applications in the AEC/FM (Architecture, Engineering, Construction and Facilities Management) domains.",
+    "table": {
+      "heading": [
+        {
+          "title": "Heading1"
+        },
+        {
+          "title": "Heading2"
+        }
+      ],
+      "column": [
+        {
+          "columnData": [
+            {
+              "row": [
+                {
+                  "data": "Row1"
+                },
+                {
+                  "data": "Row2"
+                },
+                {
+                  "data": "Row1"
+                },
+                {
+                  "data": "Row2"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    }
+  }
+}

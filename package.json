@@ -3,16 +3,10 @@
   "description": "A simplified blog for developers and designer. This starter built with Gatsby and Netlify CMS",
   "author": "W3Layouts Team <info@w3layouts.com>",
   "version": "1.6.0",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/W3Layouts/gatsby-starter-delog/issues"
-  },
   "dependencies": {
     "@popperjs/core": "2.9.3",
     "bootstrap": "4.6.0",
     "gatsby": "^2.21.0",
-    "gatsby-plugin-dark-mode": "^1.1.1",
-    "gatsby-plugin-google-analytics": "^2.1.36",
     "gatsby-plugin-manifest": "^2.4.1",
     "gatsby-plugin-netlify-cms": "^4.1.38",
     "gatsby-plugin-offline": "^3.2.0",

@@ -14,53 +14,46 @@ collections:
         label: HomepageBanner
         file: site-meta-data.json
         fields:
-          - widget: string
-            name: title
-            label: Site Title
-            required: false
-          - widget: list
-            name: siteUrls
-            label: Site Urls
+          - name: menuItems
+            widget: list
+            label: Menu Items
             required: true
-            fields: 
-              - {label: URLName, name: urlName, widget: string}
-          - widget: object
-            name: home
-            label: Homepage Content
             fields:
-              - widget: string
-                name: title
+              - { label: Menu Item, name: menuItem, widget: string }
+          - name: homeBannerContent
+            widget: object
+            label: Homepage Banner Content
+            fields:
+              - name: title
+                widget: string
                 label: Title
-                default: ""
-                required: false
-              - widget: markdown
-                name: description
+                required: true
+              - name: description
+                widget: string
                 label: Description
-                default: ""
                 required: false
-              - widget: image
-                name: image
+              - name: image
+                widget: image
                 label: Featured Image
-                hint: "Image size 1280x800 works best :)"
-                required: false
+                required: true
                 media_library:
                   config:
                     multiple: false
-              - widget: string
-                name: buttonText
-                label: Button Text
+              - name: bannerButtonText
+                widget: string
+                label: Banner Button Text
                 required: false
-              - widget: string
-                name: buttonLink
-                label: Button Link
+              - name: bannerbuttonLink
+                widget: string
+                label: Banner Button Link
                 required: false
   - name: homepageContent
     label: HomepageContent
     files:
-      - name: HomepageContent
-        label: HomepageContent
-        file: site-content-data.json
-        fields:      
+      - name: about
+        label: About
+        file: site-about-data.json
+        fields:
           - label: About
             name: about
             widget: object
@@ -70,7 +63,7 @@ collections:
                 widget: string
               - label: SubText
                 name: subtext
-                widget: text 
+                widget: markdown
               - name: table
                 label: Table
                 widget: object
@@ -88,41 +81,53 @@ collections:
                     required: false
                     fields:
                       - name: ColumnData
-                        label: columnData
+                        label: column Data
                         widget: list
                         fields:
-                           - name: Row
-                             label: row
-                             widget: list
-                             fields:
-                               - { name: Data, label: Data, widget: string }     
+                          - name: Row
+                            label: row
+                            widget: list
+                            fields:
+                              - { name: Data, label: Data, widget: string }
               - label: Text
                 name: text
-                widget: text
+                widget: markdown
+      - name: KeyDates
+        label: Key Dates
+        file: site-keyDates-data.json
+        fields:
           - label: Key Dates
             name: keyDates
             widget: object
             required: false
             fields:
               - name: title
-                label: Title 
+                label: Title
                 widget: string
               - label: Text
                 name: text
-                widget: text
+                widget: markdown
+      - name: conferenceTopics
+        label: Conference topics
+        file: site-ConferenceTopics-data.json
+        fields:
           - label: Conference topics
-            name: ConferenceTopics
+            name: conferenceTopics
             widget: object
             required: false
             fields:
               - name: title
-                label: Title 
+                label: Title
                 widget: string
               - label: Text
                 name: text
-                widget: text 
-          - label: Profile
-            name: profile
+                widget: markdown
+      - name: Committee
+        label: committee
+        file: site-committee-data.json
+        fields:
+          - label: Committee
+            name: committee
             widget: object
             required: false
             fields:
@@ -131,7 +136,7 @@ collections:
                 widget: string
               - label: SubText
                 name: subtext
-                widget: text 
+                widget: text
               - label: ProfileData
                 name: profileData
                 widget: list
@@ -143,53 +148,96 @@ collections:
                   - name: title
                     label: Title
                     widget: string
+                  - name: text
+                    label: Text
+                    widget: text
               - label: Text
                 name: text
+                widget: markdown
+      - name: Speakers
+        label: speakers
+        file: site-speakers-data.json
+        fields:
+          - name: title
+            label: Title
+            widget: string
+          - label: SubText
+            name: subtext
+            widget: text
+          - label: Speaker Details
+            name: profileData
+            widget: list
+            required: false
+            fields:
+              - name: image
+                label: image
+                widget: image
+              - name: title
+                label: Title
+                widget: string
+              - name: text
+                label: text
                 widget: text
-          - label: Speakers
-            name: speakers
+          - label: Text
+            name: text
+            widget: markdown
+      - name: Submissions
+        label: submissions
+        file: site-submissions-data.json
+        fields:
+          - label: Submission
+            name: submissions
             widget: object
             required: false
             fields:
               - name: title
                 label: Title
                 widget: string
-              - label: SubText
-                name: subtext
-                widget: text 
-              - label: Speaker Details
-                name: speakerDetails
-                widget: list
-                required: false
-                fields:
-                  - name: image
-                    label: image
-                    widget: image
-                  - name: title
-                    label: Title
-                    widget: string
               - label: Text
                 name: text
-                widget: text
-          - label: Submission
-            name: submissions
-            widget: list
-            required: false
-            fields:
-              - name: title
-                label: Title 
-                widget: string
-              - label: Text
-                name: text
-                widget: text
+                widget: markdown
+      - name: Partners
+        label: partners
+        file: site-partners-data.json
+        fields:
           - label: Partners
             name: partners
             widget: list
             required: false
             fields:
               - name: title
-                label: Title 
+                label: Title
                 widget: string
               - label: Text
                 name: text
+                widget: markdown
+      - name: Site Footer
+        label: siteFooter
+        file: site-footer-data.json
+        fields:
+          - label: Site Footer
+            name: siteFooter
+            widget: object
+            required: false
+            fields:
+              - name: title
+                label: Title
+                widget: string
+              - name: columnOneTitle
+                label: Column one title
+                widget: string
+              - label: Column one Text
+                name: columnOneText
+                widget: text
+              - name: columnTwoTitle
+                label: Column two title
+                widget: string
+              - label: columnTwoText
+                name: Column Two text
+                widget: text
+              - name: columnThreeTitle
+                label: Column Three title
+                widget: string
+              - label: columnThreeText
+                name: Column three text
                 widget: text
