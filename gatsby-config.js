@@ -12,7 +12,7 @@ module.exports = {
     about: require("./site-about-data.json"),
     committee: require("./site-committee-data.json"),
     conferenceTopics: require("./site-conferenceTopics-data.json"),
-    keyDates: require("./site-keyDates-data.json"),
+    keyDates: require("./site-keydates-data.json"),
     partners: require("./site-partners-data.json"),
     speakers: require("./site-speakers-data.json"),
     submissions: require("./site-submissions-data.json"),
