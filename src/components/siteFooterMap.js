@@ -1,47 +1,60 @@
-import React from "react";
+import React, { Fragment } from "react";
 import GoogleMapReact from "google-map-react";
+import { Container, Row, Col } from "react-bootstrap";
+import PropTypes from "prop-types";
 
-const AnyReactComponent = ({ text }) => (
-  <div
-    style={{
-      color: "white",
-      background: "grey",
-      padding: "15px 10px",
-      display: "inline-flex",
-      textAlign: "center",
-      alignItems: "center",
-      justifyContent: "center",
-      borderRadius: "100%",
-      transform: "translate(-50%, -50%)",
-    }}
-  >
-    {text}
-  </div>
-);
-const SiteFooterMap = () => {
+const SiteFooterMap = ({ menuItems }) => {
   const defaultProps = {
     center: {
-      lat: 59.95,
-      lng: 30.33,
+      lat: 63.4494708202128,
+      lng: 10.912436292574748,
     },
-    zoom: 11,
+    zoom: 15,
+  };
+
+  const renderMarkers = (map, maps) => {
+    let marker = new maps.Marker({
+      position: { lat: 63.4494708202128, lng: 10.912436292574748 },
+      map,
+      title: "Scandic Hell",
+    });
+    return marker;
   };
 
   return (
-    // Important! Always set the container height explicitly
     <div style={{ height: "40vh", width: "100%" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyCR_REOa_3Kg0ZH-BYH7GrGBbhyg7EfDI0" }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
-      >
-        <AnyReactComponent lat={59.955413} lng={30.337844} text="My Marker" />
-      </GoogleMapReact>
-      <div className={"footer"}>
-        <p>Footer</p>
-      </div>
+        onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
+      ></GoogleMapReact>
+      <Container>
+        <footer className="page-footer footer">
+          <hr className="featurette-divider" />
+          <div className="row align-items-start">
+            {menuItems.map(({ menuItem }, i) => {
+              const menu = menuItem.split(" ").join("");
+              return (
+                <Fragment key={i}>
+                  <Col>
+                    <a
+                      className={"footerLinks"}
+                      href={`#${menu.split(" ").join("")}`}
+                    >
+                      {menuItem}
+                    </a>
+                  </Col>
+                </Fragment>
+              );
+            })}
+          </div>
+        </footer>
+      </Container>
     </div>
   );
 };
-
+SiteFooterMap.propTypes = {
+  menuItems: PropTypes.array,
+};
 export default SiteFooterMap;

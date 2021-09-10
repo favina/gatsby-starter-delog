@@ -7,9 +7,16 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Conference",
+    title: "ECPPM Conference",
     homePageBanner: require("./site-meta-data.json"),
-    siteContent: require("./site-content-data.json"),
+    about: require("./site-about-data.json"),
+    committee: require("./site-committee-data.json"),
+    conferenceTopics: require("./site-conferenceTopics-data.json"),
+    keyDates: require("./site-keyDates-data.json"),
+    partners: require("./site-partners-data.json"),
+    speakers: require("./site-speakers-data.json"),
+    submissions: require("./site-submissions-data.json"),
+    siteFooter: require("./site-footer-data.json"),
   },
   plugins: [
     {
@@ -40,24 +47,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // The property ID; the tracking code won't be generated without it. replace with yours
-        trackingId: "UA-164743872-1",
-        head: true,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Delog GatbsyJS Starter`,
-        short_name: `Delfog`,
-        start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#381696`,
-        display: `standalone`,
-        icon: "src/images/icon.png",
-      },
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
