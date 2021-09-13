@@ -9,6 +9,7 @@ public_folder: /assets
 collections:
   - name: homepage
     label: Homepage
+    preview_path: /
     files:
       - name: HomepageBanner
         label: HomepageBanner
