@@ -1,7 +1,7 @@
 {
   "about": {
     "title": "About",
-    "subtext": "### Steering Committee Members\n\n* **Robert Amor**, University of Auckland, New Zealand.\n* **Ezio Arlati**, Politecnico di Milano, Italy.\n* **Vladimir Bazjanac**, Stanford University, USA.\n* **Jakob Beetz**, Eindhoven University of Technology, Netherlands.",
+    "subtext": "### Steering Committee Members\n\n* **Robert Amor**, University of Auckland, New Zealand.\n* **Ezio Arlati**, Politecnico di Milano, Italy.\n* **Vladimir Bazjanac**, Stanford University, USA.\n* **Jakob Beetz**, Eindhoven University of Technology, Netherlands.\n\n\n\n| Syntax    | Description |\n| --------- | ----------- |\n| Header    | Title       |\n| Paragraph | Text        |",
     "table": {
       "heading": [
         {
