@@ -11,7 +11,14 @@ module.exports = {
     homePageBanner: require("./site-meta-data.json"),
     siteContent: require("./site-content-data.json"),
   },
+
   plugins: [
+    {
+      resolve: `gatsby-plugin-json-remark`,
+      options: {
+        paths: [`${__dirname}`],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
