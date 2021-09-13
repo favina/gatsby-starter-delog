@@ -1,46 +1,58 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Row } from "react-bootstrap";
 
-const HomepageBanner = ({ homeContent, siteUrls }) => {
+const HomepageBanner = ({ homeBannerContent, menuItems }) => {
   return (
     <header>
       <div
         className="img-fluid banner"
-        style={{ backgroundImage: `url(${homeContent.image})` }}
+        style={{ backgroundImage: `url(${homeBannerContent.image})` }}
       >
-        <Navbar className="navbar navbar-expand-sm navbar-light" expand="lg">
+        <Navbar className="navbar navbar-expand-md" expand="md">
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
           <Navbar.Collapse
             id="responsive-navbar-nav"
-            className={"justify-content-center"}
+            className="justify-content-center"
           >
             <Nav className="m-auto navbarLinks">
-              {siteUrls.map(({ urlName }, i) => (
-                <Fragment key={i}>
-                  <Nav.Link href={`#${urlName}`}>{urlName}</Nav.Link>
-                </Fragment>
-              ))}
+              {menuItems.map(({ menuItem }, i) => {
+                const menu = menuItem.split(" ").join("");
+                return (
+                  <Fragment key={i}>
+                    <Nav.Link href={`#${menu.split(" ").join("")}`}>
+                      {menuItem}
+                    </Nav.Link>
+                  </Fragment>
+                );
+              })}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <Container>
-          <div className={"bannerContent"}>
-            <h1 className={"title"}>{homeContent.title}</h1>
-            <h2 className={"subtitle"}>{homeContent.description}</h2>
-            <a className={"homeButton"} href={homeContent.buttonLink}>
-              {homeContent.buttonText}
-            </a>
-          </div>
-        </Container>
+        <div className="d-flex align-items-center min-vh-100">
+          <Container>
+            <Row className="my-auto">
+              <div className={"bannerContent"}>
+                <h1 className={"title"}>{homeBannerContent.title}</h1>
+                <h2 className={"subtitle"}>{homeBannerContent.description}</h2>
+                <a
+                  className={"homeButton"}
+                  href={homeBannerContent.bannerbuttonLink}
+                >
+                  {homeBannerContent.bannerButtonText}
+                </a>
+              </div>
+            </Row>
+          </Container>
+        </div>
       </div>
     </header>
   );
 };
 HomepageBanner.propTypes = {
-  homeContent: PropTypes.object,
-  siteUrls: PropTypes.array,
+  homeBannerContent: PropTypes.object,
+  menuItems: PropTypes.array,
 };
 
 export default HomepageBanner;

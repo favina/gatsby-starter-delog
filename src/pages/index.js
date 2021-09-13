@@ -6,20 +6,18 @@ import SiteFooterContact from "../components/siteFooterContact";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { graphql } from "gatsby";
 import HomepageContent from "../components/homepageContent";
-import Layout from "../components/layout";
 
 const IndexPage = ({ data: { site } }) => {
   const { siteMetadata } = site;
-  console.log("siteMetadata", siteMetadata);
   return (
     <Fragment>
       <HomepageBanner
-        homeContent={siteMetadata.homePageBanner.home}
-        siteUrls={siteMetadata.homePageBanner.siteUrls}
+        homeBannerContent={siteMetadata.homePageBanner.homeBannerContent}
+        menuItems={siteMetadata.homePageBanner.menuItems}
       />
       <HomepageContent />
       <SiteFooterContact />
-      <SiteFooterMap />
+      <SiteFooterMap menuItems={siteMetadata.homePageBanner.menuItems} />
     </Fragment>
   );
 };
@@ -30,16 +28,15 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         homePageBanner {
-          title
-          siteUrls {
-            urlName
+          menuItems {
+            menuItem
           }
-          home {
+          homeBannerContent {
             title
             description
             image
-            buttonText
-            buttonLink
+            bannerButtonText
+            bannerbuttonLink
           }
         }
       }
