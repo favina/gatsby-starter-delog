@@ -217,6 +217,7 @@ collections:
       - name: "{{slug}}"
         label: "{{slug}}"
         file: site-"{{slug}}"-data.json
+        create: true
         slug: "{{title}}"
         fields:
           - label: "{{slug}}"
