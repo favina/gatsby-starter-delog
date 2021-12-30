@@ -216,7 +216,7 @@ collections:
                 widget: markdown
       - name: "Blog"
         label: "blog"
-        file: site-"{{slug}}"-data.json
+        folder: /
         create: true
         slug: "{{title}}"
         fields:
