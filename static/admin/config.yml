@@ -214,8 +214,8 @@ collections:
               - label: Text
                 name: text
                 widget: markdown
-      - name: "{{slug}}"
-        label: "{{slug}}"
+      - name: "Blog"
+        label: "blog"
         file: site-"{{slug}}"-data.json
         create: true
         slug: "{{title}}"
