@@ -214,13 +214,13 @@ collections:
               - label: Text
                 name: text
                 widget: markdown
-      - name: {{slug}}
-        label: {{slug}}
-        file: site-{{slug}}-data.json
-        slug: {{title}}
+      - name: "{{slug}}"
+        label: "{{slug}}"
+        file: site-"{{slug}}"-data.json
+        slug: "{{title}}"
         fields:
-          - label: {{slug}}
-            name: {{slug}}
+          - label: "{{slug}}"
+            name: "{{slug}}"
             widget: list
             required: false
             fields:
